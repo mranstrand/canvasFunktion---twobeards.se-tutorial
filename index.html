@@ -27,7 +27,26 @@
                 // Måla arm
                 ctx.beginPath();
                 ctx.moveTo(x + 10, y + 18);
-                ctx.lineTo(x + 15, y + 38);
+                ctx.lineTo(x + 20, y + 48);
+                ctx.stroke();
+                
+                // Måla arm
+                ctx.beginPath();
+                ctx.moveTo(x - 10, y + 18);
+                ctx.lineTo(x - 20, y + 48);
+                ctx.stroke();
+                
+                // Måla ben
+                ctx.strokeStyle = "blue";
+                ctx.beginPath();
+                ctx.moveTo(x + 10, y + 98);
+                ctx.lineTo(x + 20, y + 138);
+                ctx.stroke();
+                
+                // Måla ben
+                ctx.beginPath();
+                ctx.moveTo(x - 10, y + 98);
+                ctx.lineTo(x - 20, y + 138);
                 ctx.stroke();
             }
             
