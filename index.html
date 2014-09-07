@@ -1,0 +1,39 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <canvas style="border: 1px solid blue" width="1000" height="600" id="duk"></canvas>
+        
+        <script>
+            // Deklarera och tilldelar variabler för canvas.
+            var c = document.getElementById("duk");
+            var ctx = c.getContext("2d");
+            
+            // Måla en gubbe
+            function paintMan(x, y){
+                //Måla huvudet
+                ctx.beginPath();
+                ctx.arc(x, y, 20, 0, 2 * Math.PI);
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = "rgb(255, 0, 0)";
+                ctx.fillStyle = "rgb(255, 150, 100)";
+                ctx.stroke();
+                ctx.fill();
+
+                //Måla kropp
+                ctx.fillStyle = "olive";
+                ctx.fillRect(x - 10, y + 18, 20, 80);
+                
+                // Måla arm
+                ctx.beginPath();
+                ctx.moveTo(x + 10, y + 18);
+                ctx.lineTo(x + 15, y + 38);
+                ctx.stroke();
+            }
+            
+            paintMan(100, 100);
+            paintMan(300, 100);
+            paintMan(100, 300);
+        </script>
+    </body>
+</html>
